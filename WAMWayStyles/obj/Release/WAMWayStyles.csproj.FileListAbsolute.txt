@@ -1,0 +1,8 @@
+D:\Projects\WAMWayStyles\WAMWayStyles\bin\Release\WAMWayStyles.dll
+D:\Projects\WAMWayStyles\WAMWayStyles\bin\Release\Xamarin.Forms.Core.dll
+D:\Projects\WAMWayStyles\WAMWayStyles\bin\Release\Xamarin.Forms.Platform.dll
+D:\Projects\WAMWayStyles\WAMWayStyles\bin\Release\Xamarin.Forms.Core.pdb
+D:\Projects\WAMWayStyles\WAMWayStyles\bin\Release\Xamarin.Forms.Core.xml
+D:\Projects\WAMWayStyles\WAMWayStyles\bin\Release\Xamarin.Forms.Platform.pdb
+D:\Projects\WAMWayStyles\WAMWayStyles\obj\Release\WAMWayStyles.dll
+D:\Projects\WAMWayStyles\WAMWayStyles\obj\Release\WAMWayStyles.csprojResolveAssemblyReference.cache
