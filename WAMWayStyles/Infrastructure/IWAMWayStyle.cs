@@ -39,5 +39,6 @@ namespace WAMWayStyles.Infrastructure
         Style CellStyle { get; }
         Style WebViewStyle { get; }
         Style TimePickerStyle { get; }
+        Style AbsoluteLayoutStyle { get; }
     }
 }
