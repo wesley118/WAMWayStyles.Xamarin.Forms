@@ -1,19 +1,11 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace WAMWayStyles.Infrastructure
 {
     public abstract class WAMWayStyles : IWAMWayStyle
     {
-        public ResourceDictionary Resources
-        {
-            get
-            {
-                return new ResourceDictionary()
-                {
-
-                };
-            }
-        }
+        public virtual ResourceDictionary Resources { get; set; }
         public virtual Style ViewStyle => new Style(typeof(View)) { Setters = { new Setter { Property = View.BackgroundColorProperty , Value = Color.Default }, new Setter { Property = View.HorizontalOptionsProperty , Value = LayoutOptions.Center }, } };
         public virtual Style ActivityIndicatorStyle => new Style(typeof(ActivityIndicator)) { BasedOn = ViewStyle, CanCascade = true, ApplyToDerivedTypes = true };
         public virtual Style ButtonStyle => new Style(typeof(Button)) { BasedOn = ViewStyle, CanCascade = true, ApplyToDerivedTypes = true };
@@ -44,7 +36,9 @@ namespace WAMWayStyles.Infrastructure
         public virtual Style CellStyle => new Style(typeof(Cell)) { CanCascade = true, ApplyToDerivedTypes = true };
         public virtual Style WebViewStyle => new Style(typeof(WebView)) { CanCascade = true, ApplyToDerivedTypes = true };
         public virtual Style TimePickerStyle => new Style(typeof(TimePicker)) { CanCascade = true, ApplyToDerivedTypes = true };
-
         public virtual Style AbsoluteLayoutStyle => new Style(typeof(AbsoluteLayout)) { CanCascade = true, ApplyToDerivedTypes = true };
+        public virtual Style TabbedPageStyle => new Style(typeof(TabbedPage)) { CanCascade = true, ApplyToDerivedTypes = true };
+        public virtual Style LabelStyle_LargeFont => new Style(typeof(Label)) { CanCascade = true, ApplyToDerivedTypes = true };
+        public virtual Style LabelStyle_SmallFont => new Style(typeof(Label)) { CanCascade = true, ApplyToDerivedTypes = true };
     }
 }

@@ -7,27 +7,25 @@
 
 ////namespace WAMWayStyles
 ////{
-////    public class MasterStyle_old : WAMWayStyles.Infrastructure.WAMWayStyles
+////    class MasterStyle_r : Infrastructure.WAMWayStyles
 ////    {
-////        public static Color DarkestShade = Color.FromHex("#3D720A");
-////        public static Color DarkerShade = Color.FromHex("#5D9625");
-////        public static Color MediumShade = Color.FromHex("#79B342");
-////        public static Color LighterShade = Color.FromHex("#A1D66F");
-////        public static Color LightestShade = Color.FromHex("#C6ECA1");
-////        public void Init(string hexColor = "#79B342")
+////        protected IBasicColorOptions ColorOptions;
+////        protected void Init(IBasicColorOptions colorOptions)
 ////        {
-////            var colorformatstring = "R:{0} G:{1} B:{2} A:{3}\r\nColorToJson: {4}\r\n\r\n";
-////            var pallete = new ColorTools.ColorFunctions().GetPallete(hexColor);
-////            DarkestShade = pallete[0];
-////            Log.Information(string.Format(colorformatstring, DarkestShade.R, DarkestShade.G, DarkestShade.B, DarkestShade.A, JsonConvert.SerializeObject(DarkestShade)));
-////            DarkerShade = pallete[1];
-////            Log.Information(string.Format(colorformatstring, DarkerShade.R, DarkerShade.G, DarkerShade.B, DarkerShade.A, JsonConvert.SerializeObject(DarkerShade)));
-////            MediumShade = pallete[2];
-////            Log.Information(string.Format(colorformatstring, MediumShade.R, MediumShade.G, MediumShade.B, MediumShade.A, JsonConvert.SerializeObject(MediumShade)));
-////            LighterShade = pallete[3];
-////            Log.Information(string.Format(colorformatstring, LighterShade.R, LighterShade.G, LighterShade.B, LighterShade.A, JsonConvert.SerializeObject(LighterShade)));
-////            LightestShade = pallete[4];
-////            Log.Information(string.Format(colorformatstring, LightestShade.R, LightestShade.G, LightestShade.B, LightestShade.A, JsonConvert.SerializeObject(LightestShade)));
+////            ColorOptions = colorOptions;
+////            Log.Information(string.Format("ColorOptions: \r\n\t{0}", JsonConvert.SerializeObject(ColorOptions)));
+////            //var colorformatstring = "R:{0} G:{1} B:{2} A:{3}\r\nColorToJson: {4}\r\n\r\n";
+////            //var pallete = new ColorTools.ColorFunctions().GetPallete(hexColor);
+////            //DarkestShade = pallete[0];
+////            //Log.Information(string.Format(colorformatstring, DarkestShade.R, DarkestShade.G, DarkestShade.B, DarkestShade.A, JsonConvert.SerializeObject(DarkestShade)));
+////            //DarkerShade = pallete[1];
+////            //Log.Information(string.Format(colorformatstring, DarkerShade.R, DarkerShade.G, DarkerShade.B, DarkerShade.A, JsonConvert.SerializeObject(DarkerShade)));
+////            //MediumShade = pallete[2];
+////            //Log.Information(string.Format(colorformatstring, MediumShade.R, MediumShade.G, MediumShade.B, MediumShade.A, JsonConvert.SerializeObject(MediumShade)));
+////            //LighterShade = pallete[3];
+////            //Log.Information(string.Format(colorformatstring, LighterShade.R, LighterShade.G, LighterShade.B, LighterShade.A, JsonConvert.SerializeObject(LighterShade)));
+////            //LightestShade = pallete[4];
+////            //Log.Information(string.Format(colorformatstring, LightestShade.R, LightestShade.G, LightestShade.B, LightestShade.A, JsonConvert.SerializeObject(LightestShade)));
 ////            try
 ////            {
 ////                Application.Current.Resources = new ResourceDictionary()
@@ -69,12 +67,12 @@
 ////                throw ex;
 ////            }
 ////        }
-        
+
 ////        public Style NavigationPageStyle => new Style(typeof(NavigationPage))
 ////        {
 ////            Setters =
 ////            {
-////                new Setter { Property = NavigationPage.BackgroundColorProperty, Value = MediumShade },
+////                //new Setter { Property = NavigationPage.BackgroundColorProperty, Value = ColorOptions.DefaultBackgroundColor },
 ////                new Setter { Property = NavigationPage.HasNavigationBarProperty, Value = false },
 ////            }
 ////        };
@@ -103,7 +101,7 @@
 ////            //BasedOn = ViewStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = Page.BackgroundColorProperty, Value = MediumShade},
+////                //new Setter { Property = Page.BackgroundColorProperty, Value = ColorOptions.DefaultBackgroundColor},
 ////                new Setter { Property = Page.PaddingProperty, Value = new Thickness(5,5,5,5) },
 ////            }
 ////        };
@@ -112,7 +110,7 @@
 ////            BasedOn = PageStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = Page.BackgroundColorProperty, Value = MediumShade},
+////                //new Setter { Property = Page.BackgroundColorProperty, Value = ColorOptions.DefaultBackgroundColor},
 ////                new Setter { Property = Page.PaddingProperty, Value = new Thickness(5,5,5,5) },
 ////            }
 ////        };
@@ -121,7 +119,7 @@
 ////            BasedOn = PageStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = Page.BackgroundColorProperty, Value = MediumShade},
+////                new Setter { Property = Page.BackgroundColorProperty, Value = ColorOptions.DefaultBackgroundColor},
 ////                new Setter { Property = Page.PaddingProperty, Value = new Thickness(5,5,5,5) },
 ////            }
 ////        };
@@ -140,7 +138,7 @@
 ////            Setters =
 ////            {
 ////                new Setter { Property = ListView.HorizontalOptionsProperty, Value = LayoutOptions.Fill },
-////                new Setter { Property = ListView.SeparatorColorProperty, Value = DarkestShade },
+////                new Setter { Property = ListView.SeparatorColorProperty, Value = ColorOptions.DefaultAccentColor },
 ////                new Setter { Property = ListView.SeparatorVisibilityProperty, Value = SeparatorVisibility.Default },
 ////                new Setter { Property = ListView.VerticalOptionsProperty, Value = LayoutOptions.Fill },
 ////            }
@@ -193,7 +191,7 @@
 ////            BasedOn = LayoutStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = AbsoluteLayout.BackgroundColorProperty, Value = MediumShade }
+////                new Setter { Property = AbsoluteLayout.BackgroundColorProperty, Value = ColorOptions.DefaultBackgroundColor }
 ////            }
 
 ////        };
@@ -214,7 +212,7 @@
 ////            BasedOn = ViewStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = Label.TextColorProperty, Value = LightestShade },
+////                new Setter { Property = Label.TextColorProperty, Value = ColorOptions.DefaultTextColor },
 ////                new Setter { Property = Label.HorizontalTextAlignmentProperty, Value = TextAlignment.Start },
 ////                new Setter { Property = Label.VerticalTextAlignmentProperty, Value = TextAlignment.Center },
 ////            }
@@ -227,7 +225,7 @@
 ////                new Setter { Property = HeaderLabel.FontSizeProperty, Value = 28 },
 ////                new Setter { Property = HeaderLabel.HorizontalOptionsProperty, Value = LayoutOptions.Fill },
 ////                new Setter { Property = HeaderLabel.FontAttributesProperty, Value = FontAttributes.Bold },
-////                new Setter {Property = HeaderLabel.TextColorProperty, Value = DarkestShade },
+////                new Setter {Property = HeaderLabel.TextColorProperty, Value = ColorOptions.HeaderTextColor },
 ////                new Setter { Property = HeaderLabel.HorizontalTextAlignmentProperty, Value = TextAlignment.Center },
 ////                new Setter { Property = HeaderLabel.MarginProperty, Value = new Thickness(5,10,5,10) },
 ////            }
@@ -246,9 +244,9 @@
 ////            BasedOn = ViewStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = Button.BackgroundColorProperty, Value = DarkerShade },
-////                new Setter { Property = Button.BorderColorProperty, Value = LighterShade },
-////                new Setter { Property = Button.TextColorProperty, Value = LightestShade },
+////                new Setter { Property = Button.BackgroundColorProperty, Value = ColorOptions.ButtonColor },
+////                new Setter { Property = Button.BorderColorProperty, Value = ColorOptions.ButtonTextColor },
+////                new Setter { Property = Button.TextColorProperty, Value = ColorOptions.ButtonTextColor },
 ////                new Setter { Property = Button.BorderRadiusProperty, Value = 7 },
 ////                new Setter { Property = Button.BorderWidthProperty, Value = 1 },
 ////            }
@@ -258,7 +256,7 @@
 ////            BasedOn = ViewStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = ActivityIndicator.ColorProperty, Value = DarkestShade },
+////                new Setter { Property = ActivityIndicator.ColorProperty, Value = ColorOptions.DefaultAccentColor },
 ////            }
 ////        };
 ////        //public override Style CellStyle => new Style(typeof(Cell))
@@ -270,8 +268,8 @@
 ////            BasedOn = ViewStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = Picker.BackgroundColorProperty, Value = LightestShade },
-////                new Setter { Property = Picker.TextColorProperty, Value = DarkestShade },
+////                new Setter { Property = Picker.BackgroundColorProperty, Value = ColorOptions.EntryBackgroundColor },
+////                new Setter { Property = Picker.TextColorProperty, Value = ColorOptions.DefaultTextColor },
 ////                new Setter { Property = Picker.HorizontalOptionsProperty, Value = LayoutOptions.Fill },
 ////            }
 ////        };
@@ -283,8 +281,8 @@
 
 
 ////            {
-////                new Setter { Property = DatePicker.BackgroundColorProperty, Value = LightestShade },
-////                new Setter { Property = DatePicker.TextColorProperty, Value = DarkestShade },
+////                new Setter { Property = DatePicker.BackgroundColorProperty, Value = ColorOptions.EntryBackgroundColor },
+////                new Setter { Property = DatePicker.TextColorProperty, Value = ColorOptions.DefaultTextColor },
 ////                new Setter { Property = DatePicker.HorizontalOptionsProperty, Value = LayoutOptions.Fill },
 ////            }
 ////        };
@@ -293,8 +291,8 @@
 ////            //BasedOn = PickerStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = TimePicker.BackgroundColorProperty, Value = LightestShade },
-////                new Setter { Property = TimePicker.TextColorProperty, Value = DarkestShade },
+////                new Setter { Property = TimePicker.BackgroundColorProperty, Value = ColorOptions.EntryBackgroundColor },
+////                new Setter { Property = TimePicker.TextColorProperty, Value = ColorOptions.DefaultTextColor },
 ////                new Setter { Property = TimePicker.HorizontalOptionsProperty, Value = LayoutOptions.Fill },
 ////            }
 ////        };
@@ -304,8 +302,8 @@
 ////            Setters =
 ////            {
 ////                new Setter { Property = Entry.HorizontalOptionsProperty, Value = LayoutOptions.Fill },
-////                new Setter { Property = Entry.TextColorProperty, Value = DarkestShade },
-////                new Setter { Property = Entry.PlaceholderColorProperty, Value = LightestShade.MultiplyAlpha(50), }// Color.FromHex("#0FC6ECA1") },
+////                new Setter { Property = Entry.TextColorProperty, Value = ColorOptions.EntryBackgroundColor },
+////                new Setter { Property = Entry.PlaceholderColorProperty, Value = ColorOptions.DefaultPlaceholderTextColor, }// Color.FromHex("#0FC6ECA1") },
 ////            }
 ////        };
 ////        public override Style EditorStyle => new Style(typeof(Editor))
@@ -313,8 +311,8 @@
 ////            BasedOn = ViewStyle,
 ////            Setters =
 ////            {
-////                new Setter { Property = Editor.TextColorProperty, Value = DarkestShade },
-////                new Setter { Property = Editor.BackgroundColorProperty, Value = DarkerShade.MultiplyAlpha(50), }// Color.FromHex("#0F5D9625") },
+////                new Setter { Property = Editor.TextColorProperty, Value = ColorOptions.DefaultTextColor },
+////                new Setter { Property = Editor.BackgroundColorProperty, Value = ColorOptions.EntryBackgroundColor, }// Color.FromHex("#0F5D9625") },
 ////            }
 ////        };
 ////    }

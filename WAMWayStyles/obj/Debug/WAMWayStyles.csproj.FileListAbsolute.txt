@@ -17,3 +17,5 @@ D:\Projects\WAMWayStyles\WAMWayStyles\bin\Debug\Newtonsoft.Json.dll
 D:\Projects\WAMWayStyles\WAMWayStyles\bin\Debug\Newtonsoft.Json.xml
 D:\Projects\WAMWayStyles\WAMWayStyles\obj\Debug\WAMWayStyles.dll.mdb
 D:\Projects\WAMWayStyles\WAMWayStyles\bin\Debug\WAMWayStyles.dll.mdb
+D:\Projects\WAMWayStyles\WAMWayStyles\obj\Debug\WAMWayStyles.dll.mdb
+D:\Projects\WAMWayStyles\WAMWayStyles\bin\Debug\WAMWayStyles.dll.mdb

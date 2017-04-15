@@ -37,12 +37,16 @@
   <ItemGroup>
     <Compile Include="ColorTools\ColorFunctions.cs" />
     <Compile Include="Controls\HeaderLabel.cs" />
+    <Compile Include="Infrastructure\IBasicColorOptions.cs" />
     <Compile Include="Infrastructure\IWAMWayStyle.cs" />
     <Compile Include="Infrastructure\SerilogExtensions.cs" />
     <Compile Include="MasterStyle.cs" />
+    <Compile Include="MasterStyle_revised.cs" />
+    <Compile Include="MasterStyle_revision2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Themes\4LLGreen.cs" />
     <Compile Include="Infrastructure\WAMWayStyles.cs" />
+    <Compile Include="Themes\Options\AnalagousColorOptions.cs" />
+    <Compile Include="Themes\Options\WholeScheme.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

@@ -1,5 +1,8 @@
-﻿using WAMWayStyles;
+﻿using Newtonsoft.Json;
+using Serilog;
+using WAMWayStyles;
 using WAMWayStyles.ColorTools;
+using WAMWayStyles.Themes.Options;
 using Xamarin.Forms;
 
 namespace Forms_test
@@ -13,7 +16,14 @@ namespace Forms_test
         {
             CurrrentApp = this;
             var style = new WAMWayStyles.MasterStyle();
-            style.Init("#6CAF41");
+            var c = Color.FromHex("#79B342");
+            Log.Information(JsonConvert.SerializeObject(c));
+            var cOptions = new AnalagousColorOptions(c);
+            //var cOptions = new WholeScheme(c);
+            Log.Information(JsonConvert.SerializeObject(cOptions));
+            style.Init(cOptions);
+            Log.Information(JsonConvert.SerializeObject(style));
+            
             IAmMaster = style;
             NavPage = new NavigationPage(new StyleTestPage()); ;
             NavigationPage.SetHasNavigationBar(NavPage, false);
@@ -24,7 +34,7 @@ namespace Forms_test
         {
             Device.BeginInvokeOnMainThread(() =>
             {
-                IAmMaster.Init(hex);
+                IAmMaster.Init((new AnalagousColorOptions(Color.FromHex(hex))));
                 NavPage = new NavigationPage(new StyleTestPage());
                 NavigationPage.SetHasNavigationBar(NavPage, false);
             });

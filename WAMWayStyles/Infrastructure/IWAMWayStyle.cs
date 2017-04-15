@@ -40,5 +40,8 @@ namespace WAMWayStyles.Infrastructure
         Style WebViewStyle { get; }
         Style TimePickerStyle { get; }
         Style AbsoluteLayoutStyle { get; }
+        Style TabbedPageStyle { get; }
+        Style LabelStyle_LargeFont { get; }
+        Style LabelStyle_SmallFont { get; }
     }
 }
