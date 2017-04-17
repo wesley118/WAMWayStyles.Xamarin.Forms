@@ -43,6 +43,7 @@ namespace WAMWayStyles
                     NavigationPageStyle,
                     HeaderLabelStyle,
                     TabbedPageStyle,
+                    LabelStyle_Bold,
                 };
         }
         /// <summary>
@@ -283,6 +284,15 @@ namespace WAMWayStyles
                 new Setter {Property = HeaderLabel.TextColorProperty, Value = ColorOptions.HeaderTextColor },
                 new Setter { Property = HeaderLabel.HorizontalTextAlignmentProperty, Value = TextAlignment.Center },
                 new Setter { Property = HeaderLabel.MarginProperty, Value = new Thickness(5,10,5,10) },
+            }
+        };
+        public override Style LabelStyle_Bold => new Style(typeof(BoldLabel))
+        {
+            BasedOn = LabelStyle,
+            Setters =
+            {
+                new Setter { Property = BoldLabel.FontSizeProperty, Value = Device.GetNamedSize(NamedSize.Medium, typeof(BoldLabel)) },
+                new Setter { Property = BoldLabel.FontAttributesProperty, Value = FontAttributes.Bold },
             }
         };
 

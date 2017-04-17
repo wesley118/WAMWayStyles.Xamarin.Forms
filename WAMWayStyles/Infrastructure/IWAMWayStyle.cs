@@ -43,5 +43,6 @@ namespace WAMWayStyles.Infrastructure
         Style TabbedPageStyle { get; }
         Style LabelStyle_LargeFont { get; }
         Style LabelStyle_SmallFont { get; }
+        Style LabelStyle_Bold { get; }
     }
 }

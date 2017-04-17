@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ColorTools\ColorFunctions.cs" />
-    <Compile Include="Controls\HeaderLabel.cs" />
+    <Compile Include="Controls\Labels.cs" />
     <Compile Include="Infrastructure\IBasicColorOptions.cs" />
     <Compile Include="Infrastructure\IWAMWayStyle.cs" />
     <Compile Include="Infrastructure\SerilogExtensions.cs" />

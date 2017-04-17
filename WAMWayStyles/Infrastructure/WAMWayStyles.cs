@@ -40,5 +40,6 @@ namespace WAMWayStyles.Infrastructure
         public virtual Style TabbedPageStyle => new Style(typeof(TabbedPage)) { CanCascade = true, ApplyToDerivedTypes = true };
         public virtual Style LabelStyle_LargeFont => new Style(typeof(Label)) { CanCascade = true, ApplyToDerivedTypes = true };
         public virtual Style LabelStyle_SmallFont => new Style(typeof(Label)) { CanCascade = true, ApplyToDerivedTypes = true };
+        public virtual Style LabelStyle_Bold => new Style(typeof(Label)) { CanCascade = true, ApplyToDerivedTypes = true };
     }
 }

@@ -10,4 +10,13 @@ namespace WAMWayStyles.Controls
             this.Text = text;
         }
     }
+
+    public class BoldLabel : Label
+    {
+        public BoldLabel() { }
+        public BoldLabel(string text)
+        {
+            this.Text = text;
+        }
+    }
 }
