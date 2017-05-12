@@ -2,7 +2,7 @@
 
 namespace WAMWayStyles.Themes
 {
-    public class _4LLGreen : WAMWayStyles
+    public class _4LLGreen : WAMWayStyles.Infrastructure.WAMWayStyles
     {
         public void Init()
         {
